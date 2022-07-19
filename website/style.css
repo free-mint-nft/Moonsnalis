@@ -194,7 +194,7 @@ header{
 /* Home visible box 1000X700 px */
 .slide_table{
     margin: auto;
-    transform: translateX(calc(-150px - 2.3vw));
+    transform: translateX(calc(-160px - 2.0vw));
 }
 
 .slide_box{
