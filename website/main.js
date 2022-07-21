@@ -400,7 +400,7 @@ document.addEventListener("DOMContentLoaded",function(){move5();});
 let target = document.querySelector("#dynamic");
 
 function randomString(){
-    let stringArr = ["#Love_is_love", "#Solove_NFT", "#Love_yourself","#Just_love","#LGBTQ", "#NFT_art"];
+    let stringArr = ["#slowly-but-surely", "#cross-chain-galaxy", "#@*_* -> ???", "#Solana NFT"];
     let selectString = stringArr[Math.floor(Math.random()*stringArr.length)];
     let selectStringArr = selectString.split("");
 
