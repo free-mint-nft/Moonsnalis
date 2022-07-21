@@ -226,20 +226,27 @@ header {
 /* Home visible box 1000X700 px */
 .slide_table {
 
-    width: calc(50px + 8vw);
-    height: calc(50px + 8vw);
+    width: calc(75px + 7vw);
+    height: calc(75px + 7vw);
     margin-right: calc(10px + 1vw);
 
 }
 
 .slide_box {
     overflow: hidden;
-    width: calc(50px + 8vw);
-    height: calc(50px + 8vw);
+    width: calc(75px + 7vw);
+    height: calc(75px + 7vw);
     z-index: 2;
     border-radius: 5px;
 
 }
+.slide_wrap {
+    display: flex;
+    width: calc(300px + 28vw);
+    margin: 0;
+    padding: 0;
+}
+
 
 /* Home invisible box */
 .wall_star{
@@ -274,12 +281,6 @@ header {
     height: 400px;
 }
 
-.slide_wrap {
-    display: flex;
-    width: calc(200px + 32vw);
-    margin: 0;
-    padding: 0;
-}
 
 .slide_item {
     display: flex;
@@ -424,6 +425,11 @@ header {
     .cardbox3, .cardbox3 img, .about_content1_text, .about_content1_card{
         height: auto;
         max-height: 500px;
+
+    }
+    .about_content1{
+        padding-left: calc(1px + 1vw);
+        padding-right: calc(1px + 1vw)
     }
 
     .cardbox1{
