@@ -430,7 +430,6 @@ function blink(){
 }
 setInterval(blink,500);
 
-
 /*FAQ Button*/
 const items = document.querySelectorAll(".accordion button");
 
