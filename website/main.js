@@ -1,13 +1,3 @@
-/*Navigation bar Toggle*/
-const nab_toggle = document.querySelector('.navbar_toggle');
-const nab_menu = document.querySelector('.navbar_menu');
-const nab_icons = document.querySelector('.navbar_icons');
-
-nab_toggle.addEventListener('click', () => {
-  nab_menu.classList.toggle('active');
-  nab_icons.classList.toggle('active');
-});
-
 /* Star */
 const count     = 50;  
 const blurCount = 8;
@@ -121,110 +111,296 @@ function makeLight(i) {
 }
 
 /*Main image Slide*/
-var ul = document.querySelector('.slide_wrap');
 
-const button1 = document.querySelector('.btn1');
-const button2 = document.querySelector('.btn2');
-const button3 = document.querySelector('.btn3');
-const button4 = document.querySelector('.btn4');
-const button1_toggle = document.querySelector('.btn1 a');
-const button2_toggle = document.querySelector('.btn2 a');
-const button3_toggle = document.querySelector('.btn3 a');
-const button4_toggle = document.querySelector('.btn4 a');
-const slidebox = document.querySelector('.slide_box');
-
+// 0
+var ul = document.querySelectorAll('.slide_wrap');
+var slidebox = document.querySelectorAll('.slide_box');
 
 function move(){
-
-    window.addEventListener('resize', function(){ 
-        let slideLen = slidebox.clientWidth;
-        ul.style.transform = "translate3d(-"+slideLen*(curIndex)+"px, 0px, 0px)"
+ 
+    window.addEventListener('resize', function resize(){ 
+        let slideLen = slidebox[0].clientWidth;
+        ul[0].style.transform = "translate3d(-"+slideLen*(curIndex)+"px, 0px, 0px)"
     });
 
     var curIndex = 0;
     let = slide_timer = setInterval(function callback(){
 
-        let slideLen = slidebox.clientWidth;
-        ul.style.transition = '0.2s';
-        ul.style.transform = "translate3d(-"+slideLen*(curIndex+1)+"px, 0px, 0px)";
+        let slideLen = slidebox[0].clientWidth;
+        ul[0].style.transition = '0.2s';
+        ul[0].style.transform = "translate3d(-"+slideLen*(curIndex+1)+"px, 0px, 0px)";
 
         curIndex++;
 
-},3500); 
+},4000); 
 
-    setInterval(function(){
-    /*Main image Slide Button*/
-    let slideLen = slidebox.clientWidth;
-    function btn1(){
-        curIndex = 0
-        ul.style.transition = '0.2s';
-        ul.style.transform = "translate3d(-"+slideLen*(curIndex)+"px, 0px, 0px)"
-    }
-    button1.addEventListener('click', btn1);
-
-    function btn2(){
-        curIndex = 1;
-        ul.style.transition = '0.2s';
-        ul.style.transform = "translate3d(-"+slideLen*(curIndex)+"px, 0px, 0px)";
-    }
-    button2.addEventListener('click', btn2);
-
-    function btn3(){
-        curIndex = 2;
-        ul.style.transition = '0.2s';
-        ul.style.transform = "translate3d(-"+slideLen*(curIndex)+"px, 0px, 0px)";
-    }
-    button3.addEventListener('click', btn3);
-
-    function btn4(){
-        curIndex = 3;
-        ul.style.transition = '0.2s';
-        ul.style.transform = "translate3d(-"+slideLen*(curIndex)+"px, 0px, 0px)";
-    }
-    button4.addEventListener('click', btn4);
-
-        
-        if(curIndex==0||curIndex==4){  
-            button1_toggle.classList.add('on');
-            button2_toggle.classList.remove('on');
-            button3_toggle.classList.remove('on');
-            button4_toggle.classList.remove('on');
-            }
-        else if(curIndex==1){   
-            button2_toggle.classList.add('on');
-            button1_toggle.classList.remove('on');
-            button3_toggle.classList.remove('on');
-            button4_toggle.classList.remove('on');
-        }
-        else if(curIndex==2){   
-            button3_toggle.classList.add('on');
-            button1_toggle.classList.remove('on');
-            button2_toggle.classList.remove('on');
-            button4_toggle.classList.remove('on');
-        }
-        else if(curIndex==3){   
-            button4_toggle.classList.add('on');
-            button1_toggle.classList.remove('on');
-            button2_toggle.classList.remove('on');
-            button3_toggle.classList.remove('on');
-        }
-        
-        if(curIndex === 4){
-            setTimeout(function(){
-            ul.style.transition = '0s';
-            ul.style.transform = "translate3d(0px, 0px, 0px)"; },201)
+    setInterval(function (){
+        if(curIndex === 3){
+            setTimeout(function last2(){
+            ul[0].style.transition = '0s';
+            ul[0].style.transform = "translate3d(0px, 0px, 0px)"; },201)
             curIndex = 0;
         }
     })
+  }
 
-}
-document.addEventListener("DOMContentLoaded",function(){move();});
+  document.addEventListener("DOMContentLoaded",function(){move();});
+
+  // 4
+function move3(){
+ 
+    window.addEventListener('resize', function resize(){ 
+        let slideLen = slidebox[3].clientWidth;
+        ul[3].style.transform = "translate3d(-"+slideLen*(curIndex)+"px, 0px, 0px)"
+    });
+
+    var curIndex = 0;
+    let = slide_timer = setInterval(function callback(){
+
+        let slideLen = slidebox[3].clientWidth;
+        ul[3].style.transition = '0.2s';
+        ul[3].style.transform = "translate3d(-"+slideLen*(curIndex+1)+"px, 0px, 0px)";
+
+        curIndex++;
+
+},4000); 
+
+    setInterval(function (){
+        if(curIndex === 3){
+            setTimeout(function last2(){
+            ul[3].style.transition = '0s';
+            ul[3].style.transform = "translate3d(0px, 0px, 0px)"; },201)
+            curIndex = 0;
+        }
+    })
+  }
+
+document.addEventListener("DOMContentLoaded",function(){move3();});
+
+  // 6
+  function move6(){
+ 
+    window.addEventListener('resize', function resize(){ 
+        let slideLen = slidebox[6].clientWidth;
+        ul[6].style.transform = "translate3d(-"+slideLen*(curIndex)+"px, 0px, 0px)"
+    });
+
+    var curIndex = 0;
+    let = slide_timer = setInterval(function callback(){
+
+        let slideLen = slidebox[6].clientWidth;
+        ul[6].style.transition = '0.2s';
+        ul[6].style.transform = "translate3d(-"+slideLen*(curIndex+1)+"px, 0px, 0px)";
+
+        curIndex++;
+
+},4000); 
+
+    setInterval(function (){
+        if(curIndex === 3){
+            setTimeout(function last2(){
+            ul[6].style.transition = '0s';
+            ul[6].style.transform = "translate3d(0px, 0px, 0px)"; },201)
+            curIndex = 0;
+        }
+    })
+  }
+
+document.addEventListener("DOMContentLoaded",function(){move6();});
+
+  // 1
+
+  function move1(){
+ 
+    window.addEventListener('resize', function resize(){ 
+        let slideLen = slidebox[1].clientWidth;
+        ul[1].style.transform = "translate3d(-"+slideLen*(curIndex)+"px, 0px, 0px)"
+    });
+
+    var curIndex = 0;
+    let = slide_timer = setInterval(function callback(){
+
+        let slideLen = slidebox[1].clientWidth;
+        ul[1].style.transition = '0.2s';
+        ul[1].style.transform = "translate3d(-"+slideLen*(curIndex+1)+"px, 0px, 0px)";
+
+        curIndex++;
+
+},4000); 
+
+    setInterval(function (){
+        if(curIndex === 3){
+            setTimeout(function last2(){
+            ul[1].style.transition = '0s';
+            ul[1].style.transform = "translate3d(0px, 0px, 0px)"; },201)
+            curIndex = 0;
+        }
+    })
+  }
+
+document.addEventListener("DOMContentLoaded",function(){move1();});
+
+  // 4
+  function move4(){
+ 
+    window.addEventListener('resize', function resize(){ 
+        let slideLen = slidebox[4].clientWidth;
+        ul[4].style.transform = "translate3d(-"+slideLen*(curIndex)+"px, 0px, 0px)"
+    });
+
+    var curIndex = 0;
+    let = slide_timer = setInterval(function callback(){
+
+        let slideLen = slidebox[4].clientWidth;
+        ul[4].style.transition = '0.2s';
+        ul[4].style.transform = "translate3d(-"+slideLen*(curIndex+1)+"px, 0px, 0px)";
+
+        curIndex++;
+
+},4000); 
+
+    setInterval(function (){
+        if(curIndex === 3){
+            setTimeout(function last2(){
+            ul[4].style.transition = '0s';
+            ul[4].style.transform = "translate3d(0px, 0px, 0px)"; },201)
+            curIndex = 0;
+        }
+    })
+  }
+
+document.addEventListener("DOMContentLoaded",function(){move4();});
+
+  // 7
+  function move7(){
+ 
+    window.addEventListener('resize', function resize(){ 
+        let slideLen = slidebox[7].clientWidth;
+        ul[7].style.transform = "translate3d(-"+slideLen*(curIndex)+"px, 0px, 0px)"
+    });
+
+    var curIndex = 0;
+    let = slide_timer = setInterval(function callback(){
+
+        let slideLen = slidebox[7].clientWidth;
+        ul[7].style.transition = '0.2s';
+        ul[7].style.transform = "translate3d(-"+slideLen*(curIndex+1)+"px, 0px, 0px)";
+
+        curIndex++;
+
+},4000); 
+
+    setInterval(function (){
+        if(curIndex === 3){
+            setTimeout(function last2(){
+            ul[7].style.transition = '0s';
+            ul[7].style.transform = "translate3d(0px, 0px, 0px)"; },201)
+            curIndex = 0;
+        }
+    })
+  }
+
+document.addEventListener("DOMContentLoaded",function(){move7();});
+
+  // 8
+  function move8(){
+ 
+    window.addEventListener('resize', function resize(){ 
+        let slideLen = slidebox[8].clientWidth;
+        ul[8].style.transform = "translate3d(-"+slideLen*(curIndex)+"px, 0px, 0px)"
+    });
+
+    var curIndex = 0;
+    let = slide_timer = setInterval(function callback(){
+
+        let slideLen = slidebox[8].clientWidth;
+        ul[8].style.transition = '0.2s';
+        ul[8].style.transform = "translate3d(-"+slideLen*(curIndex+1)+"px, 0px, 0px)";
+
+        curIndex++;
+
+},4000); 
+
+    setInterval(function (){
+        if(curIndex === 3){
+            setTimeout(function last2(){
+            ul[8].style.transition = '0s';
+            ul[8].style.transform = "translate3d(0px, 0px, 0px)"; },201)
+            curIndex = 0;
+        }
+    })
+  }
+
+document.addEventListener("DOMContentLoaded",function(){move8();});
+
+  // 2
+  function move2(){
+ 
+    window.addEventListener('resize', function resize(){ 
+        let slideLen = slidebox[2].clientWidth;
+        ul[2].style.transform = "translate3d(-"+slideLen*(curIndex)+"px, 0px, 0px)"
+    });
+
+    var curIndex = 0;
+    let = slide_timer = setInterval(function callback(){
+
+        let slideLen = slidebox[2].clientWidth;
+        ul[2].style.transition = '0.2s';
+        ul[2].style.transform = "translate3d(-"+slideLen*(curIndex+1)+"px, 0px, 0px)";
+
+        curIndex++;
+
+},4000); 
+
+    setInterval(function (){
+        if(curIndex === 3){
+            setTimeout(function last2(){
+            ul[2].style.transition = '0s';
+            ul[2].style.transform = "translate3d(0px, 0px, 0px)"; },201)
+            curIndex = 0;
+        }
+    })
+  }
+
+document.addEventListener("DOMContentLoaded",function(){move2();});
+
+  // 5
+  function move5(){
+ 
+    window.addEventListener('resize', function resize(){ 
+        let slideLen = slidebox[5].clientWidth;
+        ul[5].style.transform = "translate3d(-"+slideLen*(curIndex)+"px, 0px, 0px)"
+    });
+
+    var curIndex = 0;
+    let = slide_timer = setInterval(function callback(){
+
+        let slideLen = slidebox[5].clientWidth;
+        ul[5].style.transition = '0.2s';
+        ul[5].style.transform = "translate3d(-"+slideLen*(curIndex+1)+"px, 0px, 0px)";
+
+        curIndex++;
+
+},4000); 
+
+    setInterval(function (){
+        if(curIndex === 3){
+            setTimeout(function last2(){
+            ul[5].style.transition = '0s';
+            ul[5].style.transform = "translate3d(0px, 0px, 0px)"; },201)
+            curIndex = 0;
+        }
+    })
+  }
+
+document.addEventListener("DOMContentLoaded",function(){move5();});
+
 
 /*About2 Typing*/
 let target = document.querySelector("#dynamic");
 
 function randomString(){
-    let stringArr = ["#Love_is_love", "#Solove_NFT", "#Love_yourself","#Just_love","#LGBTQ", "#NFT_art"];
+    let stringArr = ["#slowly-but-surely", "#cross-chain-galaxy", "#@*_* -> ???", "#Solana NFT"];
     let selectString = stringArr[Math.floor(Math.random()*stringArr.length)];
     let selectStringArr = selectString.split("");
 
@@ -254,7 +430,6 @@ function blink(){
 }
 setInterval(blink,500);
 
-
 /*FAQ Button*/
 const items = document.querySelectorAll(".accordion button");
 
@@ -271,4 +446,3 @@ function toggleAccordion() {
 }
 
 items.forEach(item => item.addEventListener('click', toggleAccordion));
-
